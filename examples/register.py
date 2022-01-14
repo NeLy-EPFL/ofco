@@ -43,7 +43,7 @@ ref_frame = io.imread(ref_frame)
 param = default_parameters()
 #param["lmbd"] = 4000
 tag = ""
-for i, substack in enumerate(utils2p.load_stack_batches(os.path.join(folder, "red.tif"), 28)):
+for i, substack in enumerate(utils2p.load_stack_batches(os.path.join(folder, "denoised_red.tif"), 12)):
     print(i)
     frames = range(len(substack))
     warped_output = os.path.join(folder, f"warped_red_{i}{tag}.tif")
