@@ -100,10 +100,10 @@ def interp2_bicubic(img, xi, yi, dx_filter=np.array([[1, -8, 0, 8, -1]]) / 12):
     indx = np.logical_or((fyi < 0), indx)
     indx = np.logical_or((cyi > sy - 1), indx)
 
-    fxi = np.clip(fxi, 0, sx - 1).astype(np.int)
-    cxi = np.clip(cxi, 0, sx - 1).astype(np.int)
-    fyi = np.clip(fyi, 0, sy - 1).astype(np.int)
-    cyi = np.clip(cyi, 0, sy - 1).astype(np.int)
+    fxi = np.clip(fxi, 0, sx - 1).astype(int)  # previously np.int for the next 4 lines
+    cxi = np.clip(cxi, 0, sx - 1).astype(int)
+    fyi = np.clip(fyi, 0, sy - 1).astype(int)
+    cyi = np.clip(cyi, 0, sy - 1).astype(int)
 
     # Image at 4 neighbors
     img00 = img[(fyi, fxi)]
