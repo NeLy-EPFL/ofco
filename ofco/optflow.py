@@ -32,7 +32,7 @@ def optical_flow_estimation(I1, I2, sz0, param, verbose=False, initial_w=None):
                 max_layer=c2fLevels - 1,
                 downscale=param["c2fSpacing"],
                 sigma=smooth_sigma,
-                multichannel=False,
+                #multichannel=False,
             )
         )
     )
