@@ -39,7 +39,7 @@ def optical_flow_estimation(I1, I2, sz0, param, verbose=False, initial_w=None):
     I2C2f = reversed(
         list(
             transform.pyramid_gaussian(
-                I2, c2fLevels - 1, param["c2fSpacing"], smooth_sigma, multichannel=False
+                I2, c2fLevels - 1, param["c2fSpacing"], smooth_sigma#, multichannel=False
             )
         )
     )

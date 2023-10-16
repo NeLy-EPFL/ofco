@@ -82,7 +82,7 @@ def weighted_median(w, u):
         k[:, indx] = H - i
         pp = pc
     k = H - k
-    uo = sort_u[(k.astype(np.int), np.arange(W))]
+    uo = sort_u[(k.astype(int), np.arange(W))]
     return uo
 
 
@@ -310,7 +310,7 @@ def midway(u_1, u_2):
 
 def crop_fit_size_center(f, target_size):
     sf = np.array(f.shape)
-    shift = np.around((sf - np.array(target_size)) / 2).astype(np.int_)
+    shift = np.around((sf - np.array(target_size)) / 2).astype(int)
     f_out = f[
         shift[0] : shift[0] + target_size[0],
         shift[1] : shift[1] + target_size[1],
